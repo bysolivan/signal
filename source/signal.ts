@@ -141,6 +141,7 @@ export class Signal<Payload extends unknown[]>
       throw new Error('Signal is disposed, cannot restore')
     }
     this.clear(true)
+    this.enabled = true
   }
 
   /** Destroys the signal, removing all listeners and preventing further use. */
