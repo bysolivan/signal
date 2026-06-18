@@ -52,7 +52,7 @@ const connection = signal.connect((name, age) => {
   console.log(`${name} is ${age} years old`)
 })
 
-signal.fire('Alice', 30)
+signal.fire('Lydia', 30)
 
 connection.disconnect()
 ```
