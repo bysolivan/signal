@@ -1,4 +1,9 @@
-# Signal Module
+# Signal
+
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Deno](https://img.shields.io/badge/deno-%23000000.svg?style=for-the-badge&logo=deno&logoColor=white)
+![License](https://img.shields.io/github/license/bysolivan/signal?style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/bysolivan/signal/main.yml?style=for-the-badge)
 
 > Type-safe event system for efficient event-driven pattern.
 
