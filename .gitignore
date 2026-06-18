@@ -1,0 +1,12 @@
+# Deno
+.deno/
+documentation/
+
+# Enviroment
+.env
+
+# IDEs
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.swp

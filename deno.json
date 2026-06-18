@@ -1,0 +1,29 @@
+{
+  "name": "@bysolivan/signal",
+  "description": "Type-safe event system for efficient event-driven pattern.",
+  "version": "1.0.0",
+  "exports": "./source/index.ts",
+  "publish": {
+    "include": [
+      "source/**/*.ts",
+      "deno.json",
+      "README.md",
+      "LICENSE"
+    ]
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "semiColons": false,
+    "singleQuote": true,
+    "proseWrap": "always"
+  },
+  "tasks": {
+    "check": "deno fmt --check && deno lint && deno check"
+  },
+  "imports": {
+    "@bysolivan/types": "jsr:@bysolivan/types@^1.0.2",
+    "@std/assert": "jsr:@std/assert@^1.0.19"
+  }
+}
