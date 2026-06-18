@@ -3,7 +3,7 @@
 The first release of `@bysolivan/signal`, an type-safe event system for
 efficient event-driven pattern.
 
-## [1.0.0, 1.0.1] - 2026-06-18
+## [1.0.0, 1.0.1, 1.0.2] - 2026-06-18
 
 ### Added
 
