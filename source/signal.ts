@@ -96,7 +96,11 @@ export class Signal<Payload extends unknown[]>
     const listeners = Array.from(this._listeners.keys())
     for (const callback of listeners) {
       if (this._listeners.has(callback)) {
-        callback(...payload)
+        try {
+          callback(...payload)
+        } catch (error) {
+          throw error
+        }
       }
     }
   }
