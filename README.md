@@ -38,7 +38,7 @@ listeners, signal exposure, and complete state resetting.
 ### Installation
 
 ```bash
-deno add @bysolivan/signal
+deno add jsr:@bysolivan/signal
 ```
 
 ## Quick Usage
