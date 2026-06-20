@@ -148,7 +148,6 @@ export class Signal<Payload extends unknown[]>
     if (this._disposed) {
       throw new Error('Signal is already disposed, cannot dispose')
     }
-
     this.clear(true)
     this._disposed = true
   }
