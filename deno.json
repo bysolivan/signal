@@ -1,7 +1,7 @@
 {
   "name": "@bysolivan/signal",
   "description": "Type-safe event system for efficient event-driven pattern.",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "exports": "./source/index.ts",
   "publish": {
     "include": [
