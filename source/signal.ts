@@ -73,16 +73,11 @@ export class Signal<Payload extends unknown[]>
   ): SignalConnection {
     if (this._disposed) throw new Error('Signal is disposed, cannot connect')
     if (!this.enabled) throw new Error('Signal is disabled, cannot connect')
-    try {
-      this._listeners.set(callback, persistent)
-      return {
-        disconnect: () => {
-          this._listeners.delete(callback)
-        },
-      }
-    } catch (error) {
-      console.error('Error connecting:', error)
-      throw error
+    this._listeners.set(callback, persistent)
+    return {
+      disconnect: () => {
+        this._listeners.delete(callback)
+      },
     }
   }
 
