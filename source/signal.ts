@@ -1,4 +1,4 @@
-import type { Disposable, Restorable } from '@bysolivan/types'
+import type { Disposable, Exposable, Restorable } from '@bysolivan/types'
 
 /** Defines a function that can be connected to a signal. */
 export type Callback<Payload extends unknown[]> = (...payload: Payload) => void
@@ -38,7 +38,7 @@ export interface SignalConnection {
  * ```
  */
 export class Signal<Payload extends unknown[]>
-  implements Disposable, Restorable {
+  implements Disposable, Restorable, Exposable<ExposedSignal<Payload>> {
   // #region Lifecycle
   /** Enables or disables the signal. When disabled, it cannot fire or accept new connections. */
   public enabled: boolean = true
