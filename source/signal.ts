@@ -5,17 +5,30 @@ export type Callback<Payload extends unknown[]> = (...payload: Payload) => void
 
 /** A exposed public view of a signal that allows connecting without exposing the ability to fire them or clear listeners. */
 export interface ExposedSignal<Payload extends unknown[]> {
+  /**
+   * Connects a callback function to the signal.
+   * @param callback The function to execute when the signal is fired.
+   * @param persistent If true, the listener remains after a clear() call unless explicitly disconnected.
+   * @returns A connection object used to disconnect the listener.
+   */
   connect(
     callback: (...payload: Payload) => void,
     persistent?: boolean,
   ): SignalConnection
+
+  /** Indicates whether the signal is enabled for connections and firing. */
   readonly enabled: boolean
+
+  /** Returns a readonly map of the current listener callbacks and their persistence configuration. */
   listeners: ReadonlyMap<Callback<Payload>, boolean>
+
+  /** Determines if the signal view is associated with a disposed signal. */
   readonly disposed: boolean
 }
 
 /** Represents a connection to a signal that can be disconnected. */
 export interface SignalConnection {
+  /** Disconnects the associated callback from the signal. */
   disconnect: () => void
 }
 
